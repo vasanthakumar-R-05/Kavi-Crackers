@@ -7,13 +7,16 @@ const path = require("path");
 const bodyParser = require("body-parser");
 
 // Enable CORS for all routes
-const corsOptions = {
-  origin: 'https://kavisfireworks.com', // restrict to this specific domain
-  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE', // limit allowed HTTP methods
-  credentials: true, // enable cookies if necessary
-  optionsSuccessStatus: 200 // response for successful OPTIONS request
-};
-app.use(cors(corsOptions));
+// const corsOptions = {
+//   origin: 'https://kavisfireworks.com', // restrict to this specific domain
+//   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE', // limit allowed HTTP methods
+//   credentials: true, // enable cookies if necessary
+//   optionsSuccessStatus: 200 // response for successful OPTIONS request
+// };
+// app.use(cors(corsOptions));
+app.use(cors({
+  origin: 'https://kavisfireworks.com'
+}));
 app.use(express.json());
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
