@@ -7,7 +7,7 @@ const path = require("path");
 const bodyParser = require("body-parser");
 
 // Enable CORS for all routes
-onst corsOptions = {
+const corsOptions = {
   origin: 'https://kavisfireworks.com', // restrict to this specific domain
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE', // limit allowed HTTP methods
   credentials: true, // enable cookies if necessary
